@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                {% for new in news %}
+                    <h2>{{ new.title }}</h2><br>
+                    Author: <span>{{ new.author.name }}</span><br>
+                    <p>{{ new.content }}</p>
+                {% endfor %}
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+{% endblock content %}

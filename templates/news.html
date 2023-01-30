@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for news in news %}
+<div style="text-align: center">
+    <h1> {{ news.title }} </h1>
+    {{ news.content.html | safe }}
+</div>
+{% endfor %}
+{% endblock content %}
